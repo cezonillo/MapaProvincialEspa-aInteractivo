@@ -57,7 +57,7 @@ $(document).ready(function(){
 				
 		/****Aquí gestionaremos cualquier funcionalidad adicional relacionada con el el elemento cuando se pincha con el raton****/	
 		var mensaje = $("a."+provincia).text();
-		alert("Has seleccionado en la provincia: "+ mensaje)
+		alert("Has seleccionado la provincia: "+ mensaje)
 	
 	})
 	
@@ -73,7 +73,7 @@ $(document).ready(function(){
 						
 			/****Aquí gestionaremos cualquier funcionalidad adicional relacionada con el el elemento cuando se pincha con el raton****/	
 			var mensaje = $("a."+provincia).text();
-			alert("Has seleccionado en la provincia: "+ mensaje)
+			alert("Has seleccionado la provincia: "+ mensaje)
 		}
 	
 	})
@@ -128,8 +128,8 @@ $(document).ready(function(){
 		
 		
 		/****Aquí gestionaremos cualquier funcionalidad adicional relacionada con el el elemento cuando se pincha con el raton****/	
-		var mensaje = $("a."+provincia).text();
-		alert("Has seleccionado en la provincia: "+ mensaje)
+		var mensaje = $(this).text();
+		alert("Has seleccionado la provincia: "+ mensaje)
 	
 	})
 	
@@ -145,8 +145,8 @@ $(document).ready(function(){
 			
 			/****Aquí gestionaremos cualquier funcionalidad adicional relacionada con el el elemento cuando se pincha con el raton****/	
 			
-			var mensaje = $("a."+provincia).text();
-			alert("Has seleccionado en la provincia: "+ mensaje)	
+			var mensaje = $(this).text();
+			alert("Has seleccionado la provincia: "+ mensaje)	
 		}
 	
 	})
