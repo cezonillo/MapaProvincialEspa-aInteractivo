@@ -38,18 +38,23 @@ $(document).ready(function(){
 		$('#listadoProvincias li a').removeClass('light')
 	
 	}).qtip({ // Añadimos tooltip al pasar encima de la provincia: ver documentación sobre las opciones del tooltip en http://qtip2.com/options
+	
 			content: {
 				text: $(this).attr('class')
 			},
 			position: {
 			   	 my: 'bottom center',  
        			 at: 'top center', 
+				 adjust: {					
+					y: 10	 
+				 }
 			},
 			show: {
      		   event: 'mouseenter focus'
     		},
 			hide: {
-		        event: 'blur mouseleave'
+		        event: 'blur mouseleave',
+				target: $('area')
     		},
 			style: {
      		   classes: 'qtip-bootstrap qtip-shadow'
@@ -130,25 +135,30 @@ $(document).ready(function(){
 		$('#listadoProvincias li a').removeClass('light')
 	
 	}).qtip({ // Añadimos tooltip al pasar encima de la provincia: ver documentación sobre las opciones del tooltip en http://qtip2.com/options
+	
 			content: {
-				text: "texto de ejemplo"		
+				text: $(this).attr('class')
 			},
 			position: {
-			   	 my: 'bottom center', 
+			   	 my: 'bottom center',  
        			 at: 'top center', 
+				 adjust: {					
+					y: 10	 
+				 }
 			},
 			show: {
      		   event: 'mouseenter focus'
     		},
 			hide: {
-		        event: 'blur mouseleave'
+		        event: 'blur mouseleave',
+				target: $('area')
     		},
 			style: {
      		   classes: 'qtip-bootstrap qtip-shadow'
     		}
 			
 
-		})		
+		})			
 		
 	
 	
