@@ -131,7 +131,7 @@ $(document).ready(function(){
 	
 	}).qtip({ // Añadimos tooltip al pasar encima de la provincia: ver documentación sobre las opciones del tooltip en http://qtip2.com/options
 			content: {
-				text: $(this).attr('class')
+				text: "texto de ejemplo"		
 			},
 			position: {
 			   	 my: 'bottom center', 
