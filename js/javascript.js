@@ -6,7 +6,7 @@ $(document).ready(function(){
 	  Al salir de la provincia con el puntero, reseteamos la imagen transparente original
 	 ******************************************************************************************************************************/		
 	 
-	/******Eventos al pasar con el ratón por cada provincia******/ 
+	/******Eventos al pasar con el ratón por cada provincia y al estar a foco******/ 
 	$('area').on('mouseenter', function(){		
 		/***seleccionamos el atributo class que nos indica la provincia en la que nos encontramos****/
 		var provincia;		
@@ -15,17 +15,14 @@ $(document).ready(function(){
 		$('.spain').attr('src', './img/'+provincia+'.png')	
 		$('#listadoProvincias li a.'+provincia).addClass('light')	
 		
-		/****Aquí gestionaremos cualquier funcionalidad adicional relacionada con el hover del elemento****/	
+		/****Aquí gestionaremos cualquier funcionalidad adicional relacionada con el hover del elemento****/				
 	
 	}).on('mouseleave', function(){		
 		/***reseteamos el mapa original****/
 		$('.spain').attr('src', './img/transparente.png')	
 		$('#listadoProvincias li a').removeClass('light')
 	
-	})	
-	
-	/******Eventos al entrar el foco en cada provincia******/ 
-	$('area').on('focus', function(){		
+	}).on('focus', function(){		
 		/***seleccionamos el atributo class que nos indica la provincia en la que nos encontramos****/
 		var provincia;		
 		provincia = $(this).attr('class');		
@@ -40,7 +37,27 @@ $(document).ready(function(){
 		$('.spain').attr('src', './img/transparente.png')	
 		$('#listadoProvincias li a').removeClass('light')
 	
-	})	
+	}).qtip({ // Añadimos tooltip al pasar encima de la provincia: ver documentación sobre las opciones del tooltip en http://qtip2.com/options
+			content: {
+				text: $(this).attr('class')
+			},
+			position: {
+			   	 my: 'bottom center',  
+       			 at: 'top center', 
+			},
+			show: {
+     		   event: 'mouseenter focus'
+    		},
+			hide: {
+		        event: 'blur mouseleave'
+    		},
+			style: {
+     		   classes: 'qtip-bootstrap qtip-shadow'
+    		}
+			
+
+		})		
+	
 	
 	
 	
@@ -48,7 +65,7 @@ $(document).ready(function(){
 	/*Normalmente desearemos realizar alguna acción sobre el evento click, al pulsar "intro"*/
 	/****************************************************************************************/
 	
-	/****gestionamos el evento onclick****/
+	/****gestionamos el evento onclick y keypress****/
 	$('area').on('click', function(){		
 		/***seleccionamos el atributo class que nos indica la provincia en la que nos encontramos****/
 		var provincia;		
@@ -59,10 +76,7 @@ $(document).ready(function(){
 		var mensaje = $("a."+provincia).text();
 		alert("Has seleccionado la provincia: "+ mensaje)
 	
-	})
-	
-	/****gestionamos el evento al pulsar "intro"****/
-	$('area').on('keypress', function(event){	
+	}).on('keypress', function(event){	
 		
 		/****comprobamos que pulsamos intro***/
 		if(event.which == 13){
@@ -79,11 +93,12 @@ $(document).ready(function(){
 	})
 	
 	
+	
 	/***************************************************************************************/
 	/*El código se replica si mantenemos los listados textuales de las provincias
 	/***************************************************************************************/
 	
-	/******Eventos al pasar con el ratón por cada provincia******/ 
+	/******Eventos al pasar con el ratón por cada provincia y al estar a foco******/ 
 	$('#listadoProvincias a').on('mouseenter', function(){		
 		/***seleccionamos el atributo class que nos indica la provincia en la que nos encontramos****/
 		var provincia;		
@@ -99,10 +114,7 @@ $(document).ready(function(){
 		$('.spain').attr('src', './img/transparente.png')	
 		$('#listadoProvincias li a').removeClass('light')
 	
-	})	
-	
-	/******Eventos al entrar el foco en cada provincia******/ 
-	$('#listadoProvincias a').on('focus', function(){		
+	}).on('focus', function(){		
 		/***seleccionamos el atributo class que nos indica la provincia en la que nos encontramos****/
 		var provincia;		
 		provincia = $(this).attr('class');		
@@ -117,10 +129,32 @@ $(document).ready(function(){
 		$('.spain').attr('src', './img/transparente.png')	
 		$('#listadoProvincias li a').removeClass('light')
 	
-	})	
+	}).qtip({ // Añadimos tooltip al pasar encima de la provincia: ver documentación sobre las opciones del tooltip en http://qtip2.com/options
+			content: {
+				text: $(this).attr('class')
+			},
+			position: {
+			   	 my: 'bottom center', 
+       			 at: 'top center', 
+			},
+			show: {
+     		   event: 'mouseenter focus'
+    		},
+			hide: {
+		        event: 'blur mouseleave'
+    		},
+			style: {
+     		   classes: 'qtip-bootstrap qtip-shadow'
+    		}
+			
+
+		})		
+		
 	
 	
-	/****gestionamos el evento onclick****/
+	
+	
+	/****gestionamos el evento onclick y keypress****/
 	$('#listadoProvincias a').on('click', function(){		
 		/***seleccionamos el atributo class que nos indica la provincia en la que nos encontramos****/
 		var provincia;		
@@ -131,10 +165,7 @@ $(document).ready(function(){
 		var mensaje = $(this).text();
 		alert("Has seleccionado la provincia: "+ mensaje)
 	
-	})
-	
-	/****gestionamos el evento al pulsar "intro"****/
-	$('#listadoProvincias a').on('keypress', function(event){	
+	}).on('keypress', function(event){	
 		
 		/****comprobamos que pulsamos intro***/
 		if(event.which == 13){
@@ -150,6 +181,9 @@ $(document).ready(function(){
 		}
 	
 	})
+	
+	
+	
 	
 
 })
