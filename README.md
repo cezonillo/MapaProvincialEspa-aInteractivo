@@ -20,5 +20,5 @@ Ficheros existentes:
 * js/jquery-1.10.2.min.js: importamos la libraría jquery
 * js/jquery-1.10.2.min.map: necesario para la librería jquery
 * js/jquery.qtip.min.js: javascript que incorpora la funcionalidad del plugin qTip2
-* js/javascript.js: javascript que maneja los eventos para que las provincias se resalten. Queda preparada la gestión de eventos click y keypress de cada provincia.
+* js/javascript.js: javascript que maneja los eventos para que las provincias se resalten. Queda preparada la gestión de eventos click y keypress de cada provincia. Además se añade un tooltip al resaltar cada provincia.
 * img/: esta carpeta contiene las imágenes necesarias.
