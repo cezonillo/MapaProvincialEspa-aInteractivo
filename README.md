@@ -1,5 +1,5 @@
-MapaProvincialEspa-aInteractivo
-===============================
+MapaProvincialEspañaInteractivo con tooltip
+===========================================
 
 Mapa de España interactivo y accesible (utilizando HTML + jQuery) en el que las provincias se resaltan al pasar por encima con el ratón o si estas se encuentra a foco.
 Además se añade la posiblidad de mostrar un tooltip al pasar por encima de cada una de las provincias.
