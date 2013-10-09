@@ -44,17 +44,15 @@ $(document).ready(function(){
 			},
 			position: {
 			   	 my: 'bottom center',  
-       			 at: 'top center', 
-				 adjust: {					
-					y: 10	 
-				 }
+       			 target: 'mouse'
+				 
 			},
 			show: {
      		   event: 'mouseenter focus'
     		},
 			hide: {
-		        event: 'blur mouseleave',
-				target: $('area')
+		        event: 'blur mouseleave'/*,
+				target: $('area')*/
     		},
 			style: {
      		   classes: 'qtip-bootstrap qtip-shadow'
@@ -141,24 +139,22 @@ $(document).ready(function(){
 			},
 			position: {
 			   	 my: 'bottom center',  
-       			 at: 'top center', 
-				 adjust: {					
-					y: 10	 
-				 }
+       			 target: 'mouse'
+				 
 			},
 			show: {
      		   event: 'mouseenter focus'
     		},
 			hide: {
-		        event: 'blur mouseleave',
-				target: $('area')
+		        event: 'blur mouseleave'/*,
+				target: $('area')*/
     		},
 			style: {
      		   classes: 'qtip-bootstrap qtip-shadow'
     		}
 			
 
-		})			
+		})		
 		
 	
 	
