@@ -6,7 +6,7 @@ Además se añade la posiblidad de mostrar un tooltip al pasar por encima de cad
 
 Es en repositorio se encuentran todos los ficheros necesarios para disponer del mapa interactivo.
 Cada provincia quedará resaltada, bien pasando con el ratón sobre su zona del mapa correspondiente 
-(o si el área de la provincia está a foco en su nabegación tabular), o bien sobre el texto del listado (o foco del mismo).
+(o si el área de la provincia está a foco en su navegación tabular), o bien sobre el texto del listado (o foco del mismo).
 
 El listado de provincias queda prácticamente libre de css para que el usuario los pueda adaptar libremente a sus necesidades.
 
